@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentCalcular">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/txtCosto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginEnd="101dp"
+            android:layout_marginRight="101dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Costo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="135dp"
+            android:layout_marginLeft="135dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="135dp"
+            android:layout_marginRight="135dp"
+            android:layout_marginBottom="25dp"
+            android:text="Ingrese los datos:"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/txtCosto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="210dp"
+            android:layout_height="107dp"
+            android:layout_marginStart="101dp"
+            android:layout_marginLeft="101dp"
+            android:layout_marginTop="19dp"
+            android:layout_marginBottom="31dp"
+            app:layout_constraintBottom_toTopOf="@+id/radioGroup2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtCosto">
+
+            <RadioButton
+                android:id="@+id/radDomicilio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Entrega A domicilio" />
+
+            <RadioButton
+                android:id="@+id/RadRecoger"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Recoger en local" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/total"
+            android:layout_width="44dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="183dp"
+            android:layout_marginLeft="183dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="184dp"
+            android:layout_marginRight="184dp"
+            android:layout_marginBottom="87dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnCalcular" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup2"
+            android:layout_width="211dp"
+            android:layout_height="214dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="31dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginRight="100dp"
+            android:layout_marginBottom="19dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/btnCalcular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+            tools:visibility="visible">
+
+            <RadioButton
+                android:id="@+id/radInfona"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Infonavit" />
+
+            <RadioButton
+                android:id="@+id/radCentro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Zona Centro" />
+
+            <RadioButton
+                android:id="@+id/radBenito"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Benito Juarez" />
+
+            <RadioButton
+                android:id="@+id/radOtro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Otro" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnCalcular"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginStart="150dp"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="150dp"
+            android:layout_marginRight="150dp"
+            android:layout_marginBottom="11dp"
+            android:text="Calcular"
+            app:layout_constraintBottom_toTopOf="@+id/total"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="125dp"
+        android:paddingTop="20dp"
+        android:paddingRight="125dp"
+        android:text="@string/Calcular"
+        android:textSize="24sp" />
+
+</FrameLayout>

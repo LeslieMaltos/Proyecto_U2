@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.proyectou2_17100246.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.example.proyectou2_17100246.SecondFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_Calcular"
+            app:destination="@id/Prueba2" />
+    </fragment>
+    <fragment
+        android:id="@+id/FragmentCalcular"
+        android:name="com.example.proyectou2_17100246.FragmentCalcular"
+        android:label="@string/calcular_fragment_label"
+        tools:layout="@layout/fragment_calcular">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/Prueba"
+        android:name="com.example.proyectou2_17100246.Prueba"
+        android:label="@string/calcular_fragment_label"
+        tools:layout="@layout/fragment_prueba">
+
+        <action
+            android:id="@+id/action_Prueba_to_Prueba2"
+            app:destination="@id/Prueba2" />
+    </fragment>
+    <fragment
+        android:id="@+id/Prueba2"
+        android:name="com.example.proyectou2_17100246.Prueba2"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_prueba2">
+        <action
+            android:id="@+id/action_Prueba2_to_Prueba"
+            app:destination="@id/Prueba" />
+        <action
+            android:id="@+id/action_Prueba2_to_btnGaleria"
+            app:destination="@id/btnGaleria" />
+    </fragment>
+    <fragment
+        android:id="@+id/btnGaleria"
+        android:name="com.example.proyectou2_17100246.Galeria"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_galeria">
+        <action
+            android:id="@+id/action_btnGaleria_to_Prueba"
+            app:destination="@id/Prueba2" />
+    </fragment>
+</navigation>
